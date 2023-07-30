@@ -4,6 +4,7 @@ option go_package = "github.com/AMIRHUSAINZAREI/go_grpc_sample/proto/calc";
 
 package grpc_calc;
 
+// Service for the Calculator
 service Calc {
     rpc Add(Request) returns (Response);
     rpc Sub(Request) returns (Response);
@@ -11,15 +12,18 @@ service Calc {
     rpc Div(Request) returns (ResponseWithError);
 }
 
+// Message representing a calculator input
 message Request {
     int32 a = 1;
     int32 b = 2;
 }
 
+// Message representing a calculator output
 message Response {
     float result = 1;
 }
 
+// Message representing a calculator output with potential error
 message ResponseWithError {
     float result = 1;
     string error = 2;
