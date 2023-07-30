@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+option go_package = "github.com/AMIRHUSAINZAREI/go_grpc_sample/proto/calc";
+
+package grpc_calc;
+
+service Calc {
+    rpc Add(Request) returns (Response);
+    rpc Sub(Request) returns (Response);
+    rpc Mul(Request) returns (Response);
+    rpc Div(Request) returns (ResponseWithError);
+}
+
+message Request {
+    int32 a = 1;
+    int32 b = 2;
+}
+
+message Response {
+    float result = 1;
+}
+
+message ResponseWithError {
+    float result = 1;
+    string error = 2;
+}
