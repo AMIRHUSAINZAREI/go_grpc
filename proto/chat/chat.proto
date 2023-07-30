@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option go_package = "github.com/AMIRHUSAINZAREI/grpc_test/proto/chat";
+
+package chat;
+
+// Message representing a chat message
+message ChatMessage {
+  string sender = 1;
+  string content = 2;
+  int64 timestamp = 3;
+}
+
+// Service for the chat
+service ChatService {
+  // Client-side streaming RPC for sending messages
+  rpc SendMessage(stream ChatMessage) returns (stream ChatMessage);
+}
