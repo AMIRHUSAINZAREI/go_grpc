@@ -22,7 +22,7 @@ This project consist of two application. Calculator and Chat.
 
 1. Clone the repository:
 
-- git clone https://github.com/AMIRHUSAINZAREI/go_grpc_sample.git
+- git clone https://github.com/AMIRHUSAINZAREI/go_grpc.git
 
 
 2. Install dependencies:
